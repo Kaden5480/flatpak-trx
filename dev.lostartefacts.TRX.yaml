@@ -1,6 +1,6 @@
 id: dev.lostartefacts.TRX
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: /app/TRX
 finish-args:
@@ -9,13 +9,13 @@ finish-args:
   - --socket=x11
   - --socket=pulseaudio
 modules:
-  - name: renoise
+  - name: trx
     buildsystem: simple
     build-commands:
-      - cp -r cfg games modules TRX /app/
+      - cp -r cfg games modules scripts TRX /app/
     sources:
       - type: archive
-        url: https://github.com/LostArtefacts/TRX/releases/download/trx-1.10.2/TRX-1.10.2-Linux.zip
-        sha256: 661820a4aa7c04587752a559a5164bf4b9c7baf4946521d9b49802eaecdbb6d6
+        url: https://github.com/LostArtefacts/TRX/releases/download/trx-1.11.1/TRX-1.11.1-Linux.zip
+        sha256: 46c097c41de5de3ba6cf34055c8eef75959aa292105ccdb07b4bb78e5b5bae18
         dest-filename: trx.zip
         strip-components: 0
